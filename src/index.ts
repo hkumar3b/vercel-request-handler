@@ -10,7 +10,7 @@ const s3 = new S3({
   endpoint: process.env.ENDPOINT!,
 });
 
-app.get("/*", async (req, res) => {
+app.get("/*splat", async (req, res) => {
   const host = req.hostname;
   const id = host.split(".")[0];
   console.log(id);
